@@ -68,6 +68,7 @@
     <Compile Include="Class\Config\SaveFolders\FolderElement.cs" />
     <Compile Include="Class\Config\SaveFolders\FoldersCollection.cs" />
     <Compile Include="Class\Config\SaveFolders\SaveFoldersConfigSection.cs" />
+    <Compile Include="Class\Loaders\RostelecomLoader.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
