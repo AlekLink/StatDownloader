@@ -45,6 +45,7 @@ namespace StatDownloader
             DateTime stopWatch = new DateTime();
             stopWatch = stopWatch.AddTicks(tick);
             this.Timer_Main_StatusBar.Content = String.Format("{0:dd:HH:mm:ss:ff}", stopWatch);
+            
 
             if (this._Config._RostelecomConnectConfig & this._Config._RostelDownloadConfig)
             {
