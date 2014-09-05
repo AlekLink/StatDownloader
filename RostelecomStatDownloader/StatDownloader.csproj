@@ -64,6 +64,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Class\Config\Config.cs" />
     <Compile Include="Class\Config\SaveFolders\FolderElement.cs" />
     <Compile Include="Class\Config\SaveFolders\FoldersCollection.cs" />
     <Compile Include="Class\Config\SaveFolders\SaveFoldersConfigSection.cs" />
@@ -92,7 +93,6 @@
     <Compile Include="Menu\Config\SaveConfig\RostelDownloadConfigForm.xaml.cs">
       <DependentUpon>RostelDownloadConfigForm.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Class\Config\Config.cs" />
     <Compile Include="Menu\Config\StatSrv\StatSrvForm.xaml.cs">
       <DependentUpon>StatSrvForm.xaml</DependentUpon>
     </Compile>

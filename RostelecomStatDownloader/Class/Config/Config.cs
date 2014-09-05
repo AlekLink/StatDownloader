@@ -11,11 +11,11 @@ using System.ComponentModel;
 
 namespace StatDownloader.Class.Config
 {
-    [XmlRoot(elementName:"RosTelStatConfiguration")]
+    [XmlRoot(elementName: "RosTelStatConfiguration")]
     public class Config
     {
         private static Config _instance;
-     
+
 
         public static Config Instance
         {
@@ -28,7 +28,7 @@ namespace StatDownloader.Class.Config
                 return _instance;
             }
         }
-        
+
         public static List<String> PhoneNumberAll = new List<string>();
         public static List<String> PhoneNumberDownload = new List<string>();
 
@@ -56,7 +56,7 @@ namespace StatDownloader.Class.Config
 
         public string _Login { get { return Login; } set { Login = value; } }
 
-        public string _Password {get { return Password; } set { Password = value; } }
+        public string _Password { get { return Password; } set { Password = value; } }
 
         public string _serverAddr { get { return serverAddr; } set { serverAddr = value; } }
 
@@ -116,6 +116,6 @@ namespace StatDownloader.Class.Config
 
             }
         }
-        
+
     }
 }
