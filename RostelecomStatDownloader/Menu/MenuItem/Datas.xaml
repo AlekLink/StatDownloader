@@ -1,0 +1,82 @@
+﻿<Window x:Class="StatDownloader.Menu.MenuItem.Datas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Datas" Height="410.072" Width="316.187">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <DockPanel Grid.Column="0">
+                <Label Name="Label_Ava_PhoneNum" DockPanel.Dock="Top" Content="Доступные"></Label>
+                <ListBox Name="ListBox_Ava_PhoneNum" DockPanel.Dock="Top" MinHeight="130" MaxHeight="130"></ListBox>
+                <Label Name="Label_Ava_PhoneNum_Count" DockPanel.Dock="Top" Content="0"></Label>
+            </DockPanel>
+            <DockPanel Grid.Column="1">
+                <Label Name="Label_Down_PhoneNum" DockPanel.Dock="Top" Content="Загрузка"></Label>
+                <ListBox Name="ListBox_Down_PhoneNum" DockPanel.Dock="Top" MinHeight="130" MaxHeight="130"></ListBox>
+                <Label Name="Label_Down_PhoneNum_Count" DockPanel.Dock="Top" Content="0"></Label>
+            </DockPanel>
+        </Grid>
+        <DockPanel Grid.Column="1" Grid.Row="0">
+            <Label Content="Config_StatSrv" HorizontalAlignment="Center" VerticalAlignment="Top" DockPanel.Dock="Top"></Label>
+            <Grid DockPanel.Dock="Top">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label Grid.Column="0" Grid.Row="0" Content="DailyPath:" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+                <Label Grid.Column="0" Grid.Row="1" Content="WeeklyPath:" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+                <Label Grid.Column="0" Grid.Row="2" Content="BilingPath:" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+                <Label Grid.Column="0" Grid.Row="3" Content="StatSrvForm:" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+                <Label Grid.Column="0" Grid.Row="4" Content="SaveConfigForm:" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+                <Label Grid.Column="0" Grid.Row="5" Content="ReadyToDownload:" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+
+                <Label Name="Label_DailyPath" Grid.Column="1" Grid.Row="0" Content="" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+                <Label Name="Label_WeeklyPath" Grid.Column="1" Grid.Row="1" Content="" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+                <Label Name="Label_BilingPath" Grid.Column="1" Grid.Row="2" Content="" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+                <Label Name="Label_StatSrvForm" Grid.Column="1" Grid.Row="3" Content="" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+                <Label Name="Label_SaveConfigForm" Grid.Column="1" Grid.Row="4" Content="" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+                <Label Name="Label_ReadyToDownload" Grid.Column="1" Grid.Row="5" Content="" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+            </Grid>
+        </DockPanel>
+        <DockPanel Grid.Column="0" Grid.Row="1">
+            <Label Content="Config_StatSrv" HorizontalAlignment="Center" VerticalAlignment="Top" DockPanel.Dock="Top"></Label>
+            <Grid DockPanel.Dock="Top">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label Grid.Column="0" Grid.Row="0" Content="Login:" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+                <Label Grid.Column="0" Grid.Row="1" Content="Passwd:" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+                <Label Grid.Column="0" Grid.Row="2" Content="Addr:" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+
+                <Label Name="Label_Login" Grid.Column="1" Grid.Row="0" Content="" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+                <Label Name="Label_Passwrd" Grid.Column="1" Grid.Row="1" Content="" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+                <Label Name="Label_Addr" Grid.Column="1" Grid.Row="2" Content="" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+            </Grid>
+        </DockPanel>
+    </Grid>
+</Window>
