@@ -9,8 +9,6 @@ namespace StatDownloader.Class.Function.Rostel
     class DataCollector
     {
         private Class.Config.Config config = new Config.Config();
-        private System.Net.WebResponse responce;
-        private System.Net.HttpWebRequest request;
         private string uri = String.Empty;
         private string login = String.Empty;
         private string password = String.Empty;
