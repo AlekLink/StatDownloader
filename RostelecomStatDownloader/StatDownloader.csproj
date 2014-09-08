@@ -65,10 +65,8 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Class\Config\Config.cs" />
-    <Compile Include="Class\Config\SaveFolders\FolderElement.cs" />
-    <Compile Include="Class\Config\SaveFolders\FoldersCollection.cs" />
-    <Compile Include="Class\Config\SaveFolders\SaveFoldersConfigSection.cs" />
-    <Compile Include="Class\Loaders\RostelecomLoader.cs" />
+    <Compile Include="Class\Function\Rostel\DataCollector.cs" />
+    <Compile Include="Class\Function\Rostel\HttpRequest.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -130,7 +128,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Class\FormStatus\" />
     <Folder Include="ConfigXML\" />
   </ItemGroup>
   <ItemGroup>
