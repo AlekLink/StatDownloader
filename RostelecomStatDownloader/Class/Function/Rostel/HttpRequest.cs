@@ -11,6 +11,7 @@ namespace StatDownloader.Class.Function.Rostel
 {
     public class HttpRequest
     {
+        
         private System.Net.WebResponse responce;
         private System.Net.HttpWebRequest request;
         private System.Net.WebProxy proxy = new WebProxy();
@@ -24,6 +25,7 @@ namespace StatDownloader.Class.Function.Rostel
         private bool useProxyCredentials = false;
 
         private string cookie = string.Empty;
+        private string sendData = string.Empty;
 
         public HttpRequest()
         {
@@ -36,7 +38,7 @@ namespace StatDownloader.Class.Function.Rostel
             this.useProxyCredentials = this.config._useProxyCredentials;
         }
 
-        public void startConnection(string method, string data)
+        public void Connect(string method, string data)
         {
 
             this.request = (System.Net.HttpWebRequest)System.Net.HttpWebRequest.Create(this.uri);
@@ -48,7 +50,6 @@ namespace StatDownloader.Class.Function.Rostel
             
             if (this.useProxy)
             {
-                
                 Uri proxyUri = new Uri(this.proxyAddr + ":" + this.proxyPort);
                 if (this.useProxyCredentials)
                 {
@@ -56,7 +57,47 @@ namespace StatDownloader.Class.Function.Rostel
                 }
                 this.request.Proxy = this.proxy;
             }
+
+            if (this.cookie != string.Empty)
+            {
+                this.request.Headers.Add("Cookie: " + this.cookie);
+            }
+
+            if (this.sendData != string.Empty)
+            {
+                byte[] sendDataBytes = Encoding.UTF8.GetBytes(this.sendData);
+                this.request.ContentLength = sendDataBytes.Length;
+                this.request.GetRequestStream().Write(sendDataBytes, 0, sendDataBytes.Length);
+            }
+
+            try
+            {
+                this.responce = this.request.GetResponse();
+            }
+            catch (Exception ex)
+            {
+                StatDownloader.Forms.ErrorForm errForm = new Forms.ErrorForm();
+                errForm.ShowDialog("Ошибка", "HttpRequestClass", ex.ToString());
+            }
+
+            //  Чтение ответа.
+
             
+        }
+
+        private void GetCookie(WebResponse responce)
+        { 
+            if (this.cookie != string.Empty)
+            {
+                foreach (string key in responce.Headers.AllKeys)
+                {
+                    if (responce.Headers[key].Equals("Set-Cookie"))
+                    {
+                        this.cookie = responce.Headers[key];
+                        break;
+                    }
+                }
+            }
         }
 
     }

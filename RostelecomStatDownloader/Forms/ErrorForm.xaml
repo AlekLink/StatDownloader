@@ -1,0 +1,18 @@
+﻿<Window x:Class="StatDownloader.Forms.ErrorForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ErrorForm" Height="300" Width="600" Background="#FFF1EDED">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+        </Grid.RowDefinitions>
+        <DockPanel Grid.Row="0">
+            <Label DockPanel.Dock="Top" Name="Label_ErrorPlace" Content="Место возникновения ошибки: " Margin="10"></Label>
+            <RichTextBox DockPanel.Dock="Top" Name="RichTextBox_ErrorText" Margin="10"></RichTextBox>
+        </DockPanel>
+        <StatusBar Grid.Row="1">
+            <StatusBarItem Name="StatusBarItem_CurrentTime" Content="Время ошибки: "></StatusBarItem>
+        </StatusBar>
+    </Grid>
+</Window>
